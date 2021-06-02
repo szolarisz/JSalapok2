@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JavaScript alapok 2</title>
+    <meta charset="UTF-8">
+    <link href="css/stilus.css" rel="stylesheet" title="alap stilus">
+
+    
+
+
+</head>
+
+<body>
+    <h1>JavaScript objektumok</h1>
+    <h2>DOM - Dokumentum Objektum Modell</h2>
+    HTML -> DOM -> tartalom<br>
+    A DOM rendelkezik JavaScript felülettel, amit elérhetek JavaScriptből.
+    <div id="fodoboz" class="doboz">
+        <div id="baldoboz" class="doboz">
+            Tartalom bal
+        </div>
+        <div id="jobbdoboz" class="doboz">
+            Tartalom jobb
+        </div>
+    </div>
+    <h1>DOM</h1>
+    <h2>Mi a DOM?</h2>
+    <h2>Megmozdul a weblap</h2>
+    <h3>Űrlapok</h3>
+    <form>Szélesség: 
+        <input id="szelesseg" type="number"><br>
+        <label for="magassag">Magasság:</label> <!--Követendő-->
+        <input id="magassag" type="number"><br>
+        <input id="szamol" type="button" value="Terület">
+    </form>
+    <p>
+        A téglalap területe: <span id="valasz">0</span>m<sup>2</sup>
+    </p>
+    <h3>Kevésbé szabványos megoldás:</h3>
+    Megsértjük az MVC szabályokat, hogy a button-nál kódot írunk. <br>
+    A kód a következő : onclick="terulet2()"
+    <form>
+        <label for="szelesseg2">Szélesség:</label> 
+        <input id="szelesseg2" type="number"><br>
+        <label for="magassag2">Magasság:</label> <!--Követendő-->
+        <input id="magassag2" type="number"><br>
+        <input id="szamol2" type="button" value="Terület" onclick="terulet2()">
+    </form>
+    <p>
+        A téglalap területe: <span id="valasz2">0</span>m<sup>2</sup>
+    </p>
+    <hr>
+    <form>
+        <label>e-mail cím</label>
+        <input type="text" id="email"><br>
+        <label>éjszakák száma:</label>
+        <input type="number" id="ejszakaDb"><br>
+        <label>tagság</label>
+        <input type="checkbox" id="tagsag" value="tag"><br>
+        <label>Ellátás: </label><br>
+        <input type="radio" id="nelkul" name="ellatas" value="nelkul"><label>Ellátás nélkül</label>
+        <input type="radio" id="felpanzio" name="ellatas" value="felpanzio"><label>Félpanzió</label>
+        <input type="radio" id="teljes" name="ellatas" value="teljes" checked="checked"><label>teljes ellátás</label><br>
+        <input id="koltsegSzamol" type="button" value="Költség">
+    </form>
+    <p>
+        Üdvözlünk a konferencián kedves <span id="emailEredmeny"></span>!<br>
+        A konferencia díja <span id="fizetendo">0</span> Ft.
+    </p>
+    <script type="text/javascript" src="js/teglalap.js"></script>
+    <script type="text/javascript" src="js/konferencia.js"></script>
+</body>
+
+</html>
